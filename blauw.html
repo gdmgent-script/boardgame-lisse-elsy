@@ -1,17 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rood</title>
+  <title>Vraag</title>
   <link rel="stylesheet" href="stijlblad.css" />
   <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
+  <style>
+    .feedback {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        font-size: 16px;
+        color: #333;
+        display: none; /* Initially hidden */
+    }
+
+    .feedback.success {
+        border-color: #4CAF50;
+        background-color: #dff0d8;
+        color: #3c763d;
+    }
+
+    .feedback.error {
+        border-color: #f44336;
+        background-color: #f2dede;
+        color: #a94442;
+    }
+  </style>
 </head>
 <body>
   <div class="overlay">
     <h1>BLAUW</h1>
-    <h2>Verrassing</h2>
+    <p id="action">Verrassing</h2>
+    <div id="feedback"></div>
+    <br><br>
     <a class="start-button" href="pagina5.html">Home</a>
   </div>
+
+  <script>
+    const data = "./data/verrassing-blauw.json";
+    const actionElement = document.querySelector("#action");
+    const feedback = document.querySelector('#feedback');
+
+    const init = async () => {
+          try {
+            const response = await fetch(data);
+            if (!response.ok) throw new Error('Kan data niet laden');
+            const actions = await response.json();
+            if (Array.isArray(actions) && actions.length > 0) {
+              const randomIndex = Math.floor(Math.random() * actions.length);
+              actionElement.textContent = actions[randomIndex].action;
+            } else {
+              actionElement.textContent = "Geen acties gevonden.";
+            }
+          } catch (error) {
+            actionElement.textContent = "Fout bij het laden van acties.";
+            feedback.textContent = error.message;
+            feedback.className = "feedback error";
+            feedback.style.display = "block";
+          }
+    };
+
+
+    init();
+</script>
+
+
 </body>
 </html>

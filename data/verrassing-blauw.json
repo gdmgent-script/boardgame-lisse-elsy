@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "action": "Neem een joker kaart"
+    },
+    {
+        "id": 2,
+        "action": "Verwissel jouw hulpverlener kaart met de speler rechts van je"
+    },
+    {
+        "id": 3,
+        "action": "Verwissel de politie agent met de verpleegster op het bord"
+    },
+    {
+        "id": 4,
+        "action": "Verwissel de dokter met de sociaal werker op het bord"
+    },
+    {
+        "id": 5,
+        "action": "Verwijder een vakje van het bord"
+    },
+    {
+        "id": 6,
+        "action": "Voeg een nieuw vakje toe op het bord"
+    },
+    {
+        "id": 7,
+        "action": "Ruil een vakje met de bank"
+    },
+    {
+        "id": 8,
+        "action": "Kies een vakje en blokkeer het voor één beurt"
+    },
+    {
+        "id": 9,
+        "action": "Verplaats alle vakjes één plek naar rechts"
+    },
+    {
+        "id": 10,
+        "action": "Verplaats alle vakjes één plek naar links"
+    },
+    {
+        "id": 11,
+        "action": "Kies een vakje en geef het aan een andere speler"
+    },
+    {
+        "id": 12,
+        "action": "Kies een vakje en draai het 180 graden"
+    }
+]
