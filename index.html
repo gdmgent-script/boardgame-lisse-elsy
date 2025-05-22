@@ -3,46 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rad</title>
-  <link rel="stijlblad" href="stijlblad.css" />
+  <title>The Last Deal</title>
+  <link rel="stylesheet" href="stijlblad.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="slot-machine">
-      <div class="slot" id="slot1">❓</div>
-    </div>
-    <button id="spinBtn">Draai het Rad</button>
-    <a id="nextPageLink" href="volgende.html">Ga Verder</a>
+  <div class="overlay">
+    <h1>WELKOM BIJ THE LAST DEAL</h1>
+    <h2>Lees eerst goed de spelregels</h2>
+    <a class="start-button" href="pagina2.html">Start het spel</a>
   </div>
-
-  <script>
-    const colors = ['🟥', '🟩', '🟦']; // rood, groen, blauw
-    const resultMap = {
-      '🟥': 'rood.html',
-      '🟩': 'groen.html',
-      '🟦': 'blauw.html',
-    };
-
-    const slot = document.getElementById('slot1');
-    const spinBtn = document.getElementById('spinBtn');
-    const nextPageLink = document.getElementById('nextPageLink');
-
-    spinBtn.addEventListener('click', () => {
-      nextPageLink.style.display = 'none';
-      let count = 0;
-      let max = Math.floor(Math.random() * 20) + 20;
-      const spin = setInterval(() => {
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        slot.textContent = color;
-        count++;
-        if (count >= max) {
-          clearInterval(spin);
-          const finalColor = slot.textContent;
-          nextPageLink.href = resultMap[finalColor];
-          nextPageLink.style.display = 'inline-block';
-        }
-      }, 100);
-    });
-  </script>
 </body>
 </html>
+é
