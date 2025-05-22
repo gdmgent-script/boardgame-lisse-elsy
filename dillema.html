@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stelling</title>
+  <link rel="stylesheet" href="stijlblad.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
+</head>
+<body class="stelling-page">
+  <h1 class="stelling-title">HIER KOMT EEN STELLING</h1>
+  <div id="stelling-timer">02:00</div>
+
+  <div class="stelling-buttons">
+    <a href="optie1.html">OPTIE 1</a>
+    <a href="optie2.html">OPTIE 2</a>
+    <a href="optie3.html">OPTIE 3</a>
+  </div>
+
+  <script>
+    let tijd = 120;
+    const timerElement = document.getElementById('stelling-timer');
+
+    const updateTimer = () => {
+      const minuten = String(Math.floor(tijd / 60)).padStart(2, '0');
+      const seconden = String(tijd % 60).padStart(2, '0');
+      timerElement.textContent = `${minuten}:${seconden}`;
+      tijd--;
+
+      if (tijd < 0) {
+        clearInterval(interval);
+        window.location.href = "tijd_op.html";
+      }
+    };
+
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plaats de Hulpverleners</title>
+  <link rel="stylesheet" href="stijlblad.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>PLAATS DE HULPVERLENERS</h1>
+
+      <div class="row"><div class="label">DOKTER</div><div class="dots"></div><div class="value" id="dokter"></div></div>
+      <div class="row"><div class="label">VERPLEGER</div><div class="dots"></div><div class="value" id="verpleger"></div></div>
+      <div class="row"><div class="label">PSYCHOLOOG</div><div class="dots"></div><div class="value" id="psycholoog"></div></div>
+      <div class="row"><div class="label">DRUGLIJN</div><div class="dots"></div><div class="value" id="druglijn"></div></div>
+      <div class="row"><div class="label">POLITIE</div><div class="dots"></div><div class="value" id="politie"></div></div>
+      <div class="row"><div class="label">SOCIAAL WERKER</div><div class="dots"></div><div class="value" id="sociaal"></div></div>
+
+      <div class="button">
+        <a href="pagina4.html">Ga verder</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    const hulpverleners = ['dokter', 'verpleger', 'psycholoog', 'druglijn', 'politie', 'sociaal'];
+    const cijfers = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+    hulpverleners.forEach((rol, index) => {
+      document.getElementById(rol).textContent = 'J' + cijfers[index];
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vraag</title>
+  <link rel="stylesheet" href="stijlblad.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
+  <style>
+    .feedback {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        font-size: 16px;
+        color: #333;
+        display: none; /* Initially hidden */
+    }
+
+    .feedback.success {
+        border-color: #4CAF50;
+        background-color: #dff0d8;
+        color: #3c763d;
+    }
+
+    .feedback.error {
+        border-color: #f44336;
+        background-color: #f2dede;
+        color: #a94442;
+    }
+  </style>
+</head>
+<body>
+  <div class="vraag-container">
+    <h1 class="vraag">Wat is de juiste keuze in deze situatie?</h1>
+    <div class="antwoord-knoppen">
+      <a href="#" data-id="Juist" class="antwoord knop-links">Juist</a>
+    <a href="#" data-id="Fout" class="antwoord knop-rechts">Fout</a>
+    </div>
+    <div class="feedback"></div>
+  </div>
+
+  <script>
+    const data = "./data/vragen-juistfout.json";
+    const vraagElement = document.querySelector(".vraag");
+    const antwoordKnoppen = document.querySelectorAll(".antwoord");
+
+    let currentQuestion = null;
+
+    const init = async () => {
+            try {
+                    const response = await fetch(data);
+                    if (!response.ok) {
+                            throw new Error("Network response was not ok");
+                    }
+                    const jsonData = await response.json();
+                    setRandomQuestion(jsonData);
+            } catch (error) {
+                    console.error("Error fetching data:", error);
+            }
+    };
+
+    function setRandomQuestion(questions) {
+            const askedQuestions = JSON.parse(localStorage.getItem("askedQuestions")) || [];
+            const remainingQuestions = questions.filter(q => !askedQuestions.includes(q.id));
+
+            if (remainingQuestions.length === 0) {
+                    alert("Alle vragen zijn al gesteld!");
+                    return;
+            }
+
+            currentQuestion = remainingQuestions[Math.floor(Math.random() * remainingQuestions.length)];
+            vraagElement.textContent = currentQuestion.question;
+
+            // Save the question ID to localStorage
+            askedQuestions.push(currentQuestion.id);
+            localStorage.setItem("askedQuestions", JSON.stringify(askedQuestions));
+    }
+
+    antwoordKnoppen.forEach(button => {
+        button.addEventListener("click", (event) => {
+
+            // hide de knoppen
+            document.querySelector(".antwoord-knoppen").style.display = "none";
+
+            const antwoord = event.target.dataset.id;
+            const feedbackElement = document.querySelector(".feedback");
+            const explanation = currentQuestion.explanation;
+
+            if (antwoord === currentQuestion.answer) {
+                feedbackElement.className = "feedback success";
+                feedbackElement.innerHTML = `
+                    <p>Goed gedaan! Je hebt de juiste keuze gemaakt.</p>
+                    <p>${explanation}</p>
+                    <a href="pagina5.html" class="volgende-knop">Klik hier om verder te gaan</a>
+                `;
+            } else {
+                feedbackElement.className = "feedback error";
+                feedbackElement.innerHTML = `
+                    <p>Helaas, dat is niet correct.</p>
+                    <p>${explanation}</p>
+                    <a href="pagina5.html" class="volgende-knop">Klik hier om verder te gaan</a>
+                `;
+            }
+
+            feedbackElement.style.display = "block";
+        });
+    });
+
+    init();
+</script>
+
+
+</body>
+</html>

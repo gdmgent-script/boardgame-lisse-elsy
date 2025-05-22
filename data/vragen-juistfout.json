@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "Alcohol is een harddrug.",
+        "answer": "Fout",
+        "explanation": "Alcohol is legaal, maar het wordt niet als harddrug geclassificeerd; het is wel een schadelijke stof."
+    },
+    {
+        "id": 2,
+        "question": "Een joint roken is minder schadelijk dan een sigaret.",
+        "answer": "Fout",
+        "explanation": "Joints bevatten vaak tabak én cannabis, wat de risico’s verhoogt, zoals longschade."
+    },
+    {
+        "id": 3,
+        "question": "XTC kan gevaarlijk zijn, zelfs als je maar één keer gebruikt.",
+        "answer": "Juist",
+        "explanation": "Middelen zoals benzodiazepines kunnen snel geestelijke en lichamelijke afhankelijkheid veroorzaken."
+    },
+    {
+        "id": 4,
+        "question": "XTC en MDMA zijn precies hetzelfde.",
+        "answer": "Fout",
+        "explanation": "XTC is een straatnaam voor pillen die MDMA kunnen bevatten, maar ook andere (soms gevaarlijke) stoffen."
+    },
+    {
+        "id": 5,
+        "question": "Je kunt verslaafd raken aan slaap-en kalmeringsmiddelen.",
+        "answer": "Juist",
+        "explanation": "Middelen zoals benzodiazepines kunnen snel geestelijke en lichamelijke afhankelijkheid veroorzaken."
+    },
+    {
+        "id": 6,
+        "question": "Nicotine is even verslavend als heroïne.",
+        "answer": "Juist",
+        "explanation": "Studies tonen aan dat nicotine een sterk verslavend middel is, vergelijkbaar met heroïne."
+    },
+    {
+        "id": 7,
+        "question": "Drugs blijven voor altijd in je lichaam zitten.",
+        "answer": "Fout",
+        "explanation": "De meeste drugs verlaten het lichaam na uren of dagen, afhankelijk van de stof."
+    },
+    {
+        "id": 8,
+        "question": "Paddo's (paddenstoelen) kunnen hallucinaties veroorzaken.",
+        "answer": "Juist",
+        "explanation": "Ze bevatten psilocybine, wat sterke veranderingen in waarneming kan oproepen."
+    },
+    {
+        "id": 9,
+        "question": "Drinken en drugs combineren, verhoogt de risico's.",
+        "answer": "Juist",
+        "explanation": "De combinatie kan de werking van beide versterken of onvoorspelbaar maken."
+    },
+    {
+        "id": 10,
+        "question": "Eén keer cocaïne kan je hartstlag belasten.",
+        "answer": "Juist",
+        "explanation": "Cocaïne verhoogt de hartslag en bloeddruk, wat gevaarlijk kan zijn, zelfs bij eerste gebruik."
+    },
+    {
+        "id": 11,
+        "question": "Heroïne kan legaal worden voorgeschreven als medicijn.",
+        "answer": "Juist",
+        "explanation": "In sommige landen wordt medische heroïne gebruikt voor ernstige pijn of therapieresistentie."
+    },
+    {
+        "id": 12,
+        "question": "Alcohol werkt als een stimulerend middel.",
+        "answer": "Fout",
+        "explanation": "Alcohol is een verdovend middel (depressivum), hoewel het in het begin stimulerend kan lijken."
+    },
+    {
+        "id": 13,
+        "question": "Langdurig alcohol kan je hersenen krimpen.",
+        "answer": "Juist",
+        "explanation": "Chronisch gebruik kan hersenstructuren beschadigen en cognitieve functies aantasten."
+    },
+    {
+        "id": 14,
+        "question": "Lachgas wordt door de wet beschouwd als een softdrug.",
+        "answer": "Fout",
+        "explanation": "Lachgas is niet officieel geclassificeerd als softdrug, en kan neurotoxisch zijn bij veelvuldig gebruik."
+    },
+    {
+        "id": 15,
+        "question": "Ketamine wordt soms als partydrug gebruikt.",
+        "answer": "Juist",
+        "explanation": "Hoewel het een verdovingsmiddel is, wordt het ook recreatief gebruikt voor het dissociatieve effect."
+    },
+    {
+        "id": 16,
+        "question": "Wietgebruik kan invloed hebben op je concentratievermogen.",
+        "answer": "Juist",
+        "explanation": "Cannabis beïnvloedt geheugen en aandacht, zeker bij jongeren of bij langdurig gebruik."
+    },
+    {
+        "id": 17,
+        "question": "Er bestaat geen veilige manier om drugs te gebruiken.",
+        "answer": "Juist",
+        "explanation": "Elk gebruik houdt risico’s in, zelfs als men voorzorgsmaatregelen neemt."
+    },
+    {
+        "id": 18,
+        "question": "Speed onderdrukt je eetlust.",
+        "answer": "Juist",
+        "explanation": "Speed (amfetamine) werkt op het centrale zenuwstelsel en vermindert honger."
+    },
+    {
+        "id": 19,
+        "question": "Je kunt verslaafd raken aan cafeïne.",
+        "answer": "Juist",
+        "explanation": "Cafeïneverslaving komt voor, met ontwenningsverschijnselen zoals hoofdpijn en vermoeidheid."
+    },
+    {
+        "id": 20,
+        "question": "Water drinken helpt om sneller nuchter te worden.",
+        "answer": "Fout",
+        "explanation": "Alleen tijd helpt bij het afbreken van alcohol; water drinken voorkomt enkel uitdroging."
+    },
+    {
+        "id": 21,
+        "question": "Drugsgebruik leidt altijd tot verslaving.",
+        "answer": "Fout",
+        "explanation": "Niet iedereen die gebruikt raakt verslaafd, maar er is wel altijd een risico."
+    },
+    {
+        "id": 22,
+        "question": "Alcohol is een drug.",
+        "answer": "Juist",
+        "explanation": "Alcohol beïnvloedt je hersenen en gedrag, en valt onder de definitie van een drug."
+    },
+    {
+        "id": 23,
+        "question": "Cocaïne werkt kalmerend op het lichaam.",
+        "answer": "Fout",
+        "explanation": "Cocaïne is een stimulerend middel en verhoogt energie en alertheid."
+    },
+    {
+        "id": 24,
+        "question": "Softdrugs zijn volledig onschadelijk.",
+        "answer": "Fout",
+        "explanation": "Ook softdrugs kunnen psychische en lichamelijke schade veroorzaken."
+    },
+    {
+        "id": 25,
+        "question": "Legale drugs zijn altijd veiliger dan illegale drugs.",
+        "answer": "Fout",
+        "explanation": "Legale drugs zoals alcohol en tabak zijn verantwoordelijk voor veel gezondheidsproblemen."
+    },
+    {
+        "id": 26,
+        "question": "Er bestaan veilige apps en websites die info geven over drugsgebruik.",
+        "answer": "Juist",
+        "explanation": "Websites zoals www.druglijn.be geven betrouwbare en wetenschappelijk onderbouwde informatie."
+    },
+    {
+        "id": 27,
+        "question": "Sommige mensen gebruiken drugs om te ontsnappen aan stress of problemen.",
+        "answer": "Juist",
+        "explanation": "Dit is een veelvoorkomende reden, maar verhoogt de kans op afhankelijkheid."
+    },
+    {
+        "id": 28,
+        "question": "Eén keer gebruiken kan al leiden tot sociale of juridische problemen.",
+        "answer": "Juist",
+        "explanation": "Je kunt gepakt worden, conflicten krijgen of iets doen waar je spijt van hebt."
+    },
+    {
+        "id": 29,
+        "question": "Als je maar goed slaapt en eet, is drugsgebruik geen probleem.",
+        "answer": "Fout",
+        "explanation": "Gezonde leefgewoonten helpen, maar compenseren de risico’s van drugsgebruik niet."
+    },
+    {
+        "id": 30,
+        "question": "Sommige drugs kunnen leiden tot psychische aandoeningen.",
+        "answer": "Juist",
+        "explanation": "Langdurig of zwaar gebruik kan leiden tot angststoornissen, depressie of psychose."
+    },
+    {
+        "id": 31,
+        "question": "Jongeren zijn gevoeliger voor de effecten van drugs dan volwassenen.",
+        "answer": "Juist",
+        "explanation": "Hun hersenen zijn nog in ontwikkeling en kwetsbaarder voor schade of verslaving."
+    },
+    {
+        "id": 32,
+        "question": "Verslaving is alleen een kwestie van wilskracht.",
+        "answer": "Fout",
+        "explanation": "Verslaving is een complexe aandoening met lichamelijke, psychische en sociale factoren."
+    },
+    {
+        "id": 33,
+        "question": "Alcohol is de meest gebruikte drug in België.",
+        "answer": "Juist",
+        "explanation": "Alcohol is sociaal aanvaard, legaal en wijdverspreid, waardoor het de meest gebruikte drug is."
+    },
+    {
+        "id": 34,
+        "question": "Energie- of smartdrinks zijn onschuldig en vallen niet onder drugs.",
+        "answer": "Fout",
+        "explanation": "Ze bevatten vaak veel cafeïne en andere stimulerende stoffen die risico’s kunnen geven, zeker in combinatie met andere middelen."
+    },
+    {
+        "id": 35,
+        "question": "Drugs zijn vooral een probleem van jongeren.",
+        "answer": "Fout",
+        "explanation": "Verslavingsproblemen komen voor bij alle leeftijden."
+    },
+    {
+        "id": 36,
+        "question": "Je kunt altijd anoniem hulp zoeken bij drugproblemen.",
+        "answer": "Juist",
+        "explanation": "Er zijn vertrouwelijke hulplijnen, zoals De Druglijn, waar je anoniem terechtkunt."
+    },
+    {
+        "id": 37,
+        "question": "Als je niet vaak gebruikt, kun je geen probleemgebruiker zijn.",
+        "answer": "Fout",
+        "explanation": "Ook bij af en toe gebruik kun je risico’s lopen of afhankelijk raken, zeker bij bepaalde middelen."
+    },
+    {
+        "id": 38,
+        "question": "Slaap- en kalmeringsmiddelen kunnen verslavend zijn.",
+        "answer": "Juist",
+        "explanation": "Bij langdurig gebruik of verkeerd gebruik kan afhankelijkheid ontstaan."
+    },
+    {
+        "id": 39,
+        "question": "Nicotine is één van de meest verslavende stoffen die er zijn.",
+        "answer": "Juist",
+        "explanation": "De verslavende kracht van nicotine is vergelijkbaar met die van heroïne of cocaïne."
+    },
+    {
+        "id": 40,
+        "question": "Waterpijp is minder schadelijk dan sigaretten.",
+        "answer": "Fout",
+        "explanation": "Een waterpijpsessie kan meer schadelijke stoffen opleveren dan een pakje sigaretten."
+    }
+]
