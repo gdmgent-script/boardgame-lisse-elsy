@@ -40,4 +40,48 @@
 
     .feedback.error {
         border-color: #f44336;
-        background-
+        background-color: #f2dede;
+        color: #a94442;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>ROOD</h1>
+    <p id="action">actie</h2>
+    <div id="feedback"></div>
+    <br><br>
+    <a class="start-button" href="pagina5.html">Home</a>
+  </div>
+
+  <script>
+    const data = "./data/actie-rood.json";
+    const actionElement = document.querySelector("#action");
+    const feedback = document.querySelector('#feedback');
+
+    const init = async () => {
+          try {
+            const response = await fetch(data);
+            if (!response.ok) throw new Error('Kan data niet laden');
+            const actions = await response.json();
+            if (Array.isArray(actions) && actions.length > 0) {
+              const randomIndex = Math.floor(Math.random() * actions.length);
+              actionElement.textContent = actions[randomIndex].action;
+            } else {
+              actionElement.textContent = "Geen acties gevonden.";
+            }
+          } catch (error) {
+            actionElement.textContent = "Fout bij het laden van acties.";
+            feedback.textContent = error.message;
+            feedback.className = "feedback error";
+            feedback.style.display = "block";
+          }
+    };
+
+
+    init();
+</script>
+
+
+</body>
+</html>
