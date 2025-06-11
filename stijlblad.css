@@ -35,6 +35,12 @@
     color: white;
   }
 
+  p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: white;
+  }
+
   h2 {
     font-size: 1.2em;
     margin-bottom: 30px;

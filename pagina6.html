@@ -12,30 +12,42 @@
 
   <script>
     const colors = [
-      { color: '#82BE63', page: 'groen.html' },
-      { color: '#EA4E5F', page: 'rood.html' },
-      { color: '#36A9E1', page: 'blauw.html' }
+      { color: '#82BE63', page: 'groen.html', weight: 0.6 },
+      { color: '#EA4E5F', page: 'rood.html',  weight: 0.2 },
+      { color: '#36A9E1', page: 'blauw.html', weight: 0.2 }
     ];
+
+    // Kies één kleur op basis van de weights 0.6 / 0.2 / 0.2
+    function pickWeighted(arr) {
+      let r = Math.random();
+      for (const item of arr) {
+        if (r < item.weight) return item;
+        r -= item.weight;
+      }
+      return arr[arr.length - 1];
+    }
 
     const slot = document.getElementById('colorSlot');
     let spinTime = 5;
-    let totalSpinTime = 10000; // draait nu 5 seconden
-    let delay = 100; // begint sneller
+    const totalSpinTime = 10000; // draait ~10 seconden
+    let delay = 100;             // begint snel
 
     function spin() {
-      let interval = setInterval(() => {
-        const rand = Math.floor(Math.random() * colors.length);
-        const selected = colors[rand];
-        slot.style.backgroundColor = selected.color;
+      const interval = setInterval(() => {
+        // gewoon voor de “draai”-animatie een willekeurige kleur
+        const demo = colors[Math.floor(Math.random() * colors.length)];
+        slot.style.backgroundColor = demo.color;
 
         spinTime += delay;
-        delay += 60; // veel trager uitbollen
+        delay += 60;  // steeds langzamer
 
         if (spinTime >= totalSpinTime) {
           clearInterval(interval);
-          // Laat kleur 2 seconden zichtbaar
+          // na het uitbollen, kies hier de gewogen kleur
+          const finalChoice = pickWeighted(colors);
+          slot.style.backgroundColor = finalChoice.color;
           setTimeout(() => {
-            window.location.href = selected.page;
+            window.location.href = finalChoice.page;
           }, 2000);
         }
       }, delay);
