@@ -1,60 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Camera</title>
- <link rel="stylesheet" href="stijlblad.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.min.js"></script>
-    <script>
-      let redirected = false;
-
-      // Wordt aangeroepen als het hiro-marker wordt gezien
-      AFRAME.registerComponent('markerhandler', {
-        init: function () {
-          const marker = this.el;
-          marker.addEventListener('markerFound', function () {
-            if (!redirected) {
-              redirected = true;
-              window.location.href = "dillema1.html";
-            }
-          });
-        }
-      });
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camera Pagina</title>
+  <link rel="stylesheet" href="stijlblad.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <video id="camera" autoplay playsinline></video>
-
-   <a href="pagina5.html" class="back-button">Keer terug naar het rad</a>
-
+  <a href="pagina5.html" class="return-button">keer terug</a>
 
   <script>
-    async function startCamera() {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        const videoElement = document.getElementById('camera');
-        videoElement.srcObject = stream;
-      } catch (error) {
-        alert('Kon de camera niet openen: ' + error.message);
-        console.error(error);
-      }
-    }
+    const video = document.getElementById('camera');
 
-    // Start de camera zodra de pagina geladen is
-    window.addEventListener('load', startCamera);
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(error => {
+        console.error("Camera kon niet worden gestart:", error);
+      });
   </script>
-
-   <a-scene embedded arjs>
-      <a-marker preset="hiro" markerhandler>
-        <!-- Je kan hier eventueel een 3D-object toevoegen -->
-        <a-box position="0 0.5 0" material="color: red;"></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-
 </body>
 </html>
