@@ -8,26 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
   <style>
     .feedback {
-        margin-top: 20px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        font-size: 16px;
-        color: #333;
+        font-size: 1.2em;
+        color: white;
+        font-family: 'Headline Gothic ATF', sans-serif;
         display: none; /* Initially hidden */
-    }
-
-    .feedback.success {
-        border-color: #4CAF50;
-        background-color: #dff0d8;
-        color: #3c763d;
-    }
-
-    .feedback.error {
-        border-color: #f44336;
-        background-color: #f2dede;
-        color: #a94442;
     }
   </style>
 </head>
@@ -91,14 +76,14 @@
             if (antwoord === currentQuestion.answer) {
                 feedbackElement.className = "feedback success";
                 feedbackElement.innerHTML = `
-                    <p>Goed gedaan! Je mag een vakje omdraaien!</p>
+                    <h2>Goed gedaan! Je mag een vakje omdraaien!</h2>
                     <p>${explanation}</p>
                     <a href="pagina5.html" class="volgende-knop">Klik hier om verder te gaan</a>
                 `;
             } else {
                 feedbackElement.className = "feedback error";
                 feedbackElement.innerHTML = `
-                    <p>Helaas, dat is niet correct.</p>
+                    <h2>Helaas, dat is niet correct.</h2>
                     <p>${explanation}</p>
                     <a href="pagina5.html" class="volgende-knop">Klik hier om verder te gaan</a>
                 `;
