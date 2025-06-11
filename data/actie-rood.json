@@ -9,7 +9,7 @@
     },
     {
         "id": 3,
-        "action": "Verplaats een vakje naar een lege plek"
+        "action": "Roteer een vakje naar keuze 180 graden"
     },
     {
         "id": 4,
@@ -17,34 +17,14 @@
     },
     {
         "id": 5,
-        "action": "Verwijder een vakje van het bord"
+        "action": "Roteer een vakje naar keuze 90 graden"
     },
     {
         "id": 6,
-        "action": "Voeg een nieuw vakje toe op het bord"
+        "action": "Roteer een vakje naar keuze 90 graden naar rechts"
     },
     {
         "id": 7,
-        "action": "Ruil een vakje met de bank"
-    },
-    {
-        "id": 8,
-        "action": "Kies een vakje en blokkeer het voor één beurt"
-    },
-    {
-        "id": 9,
-        "action": "Verplaats alle vakjes één plek naar rechts"
-    },
-    {
-        "id": 10,
-        "action": "Verplaats alle vakjes één plek naar links"
-    },
-    {
-        "id": 11,
-        "action": "Kies een vakje en geef het aan een andere speler"
-    },
-    {
-        "id": 12,
-        "action": "Kies een vakje en draai het 180 graden"
+        "action": "Roteer een vakje naar keuze 90 graden naar links"
     }
 ]
