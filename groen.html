@@ -76,16 +76,16 @@
             if (antwoord === currentQuestion.answer) {
                 feedbackElement.className = "feedback success";
                 feedbackElement.innerHTML = `
-                    <h2>Goed gedaan! Je mag een vakje omdraaien!</h2>
+                    <h2>Goed gedaan! Je mag een pad op het bord omdraaien!</h2>
                     <p>${explanation}</p>
-                    <a href="pagina5.html" class="volgende-knop">Klik hier om verder te gaan</a>
+                    <a href="pagina5.html" class="volgende-knop">Ga verder</a>
                 `;
             } else {
                 feedbackElement.className = "feedback error";
                 feedbackElement.innerHTML = `
                     <h2>Helaas, dat is niet correct.</h2>
                     <p>${explanation}</p>
-                    <a href="pagina5.html" class="volgende-knop">Klik hier om verder te gaan</a>
+                    <a href="pagina5.html" class="volgende-knop">Ga verder</a>
                 `;
             }
 

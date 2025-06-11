@@ -5,10 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Camera Pagina</title>
   <link rel="stylesheet" href="stijlblad.css" />
-   <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Headline+Gothic+ATF&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;    /* center verticaal (flex-direction: column) */
+      align-items: center;        /* center horizontaal */
+      height: 100vh;
+      flex-direction: column;
+      background-color: #000;
+    }
+
+    #camera {
+      width: 80vw;                /* maximaal 80% van breedte */
+      max-width: 600px;           /* niet breder dan 600px */
+      aspect-ratio: 16/9;         /* houdt 16:9 verhouding vast */
+      object-fit: cover;          /* vult video-box netjes */
+      border-radius: 8px;
+      /* hoogte wordt automatisch berekend door aspect-ratio */
+    }
+
+    .return-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      font-family: 'Headline Gothic ATF', sans-serif;
+    }
+  </style>
 </head>
 <body>
-  <video id="camera" autoplay playsinline></video>
+  <video id="camera" autoplay playsinline muted></video>
   <a href="dillema.html" class="return-button">Start de tijd</a>
 
   <script>
